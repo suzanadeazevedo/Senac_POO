@@ -4,13 +4,26 @@ public class Faculdade {
         Boletim B1 = new Boletim();
         Boletim B2 = new Boletim();
 
-        B1.inserir_nota(10);
-        B1.inserir_frequencia(true);
-        B1.alterar_status();
+    Aluno n1 = new Aluno();
 
-        B2.nota = 9;
-        B2.frequencia = 85;
-        B2.status = "Aprovado";
+    n1.setNome("Yoshi");
+    n1.setCPF(369963369);
+    n1.setEmail("yoshi@senac.com.br");
+
+    System.out.println("CPF inserido: " + n1.getCPF() );
+    System.out.println("Nome cadastrado: "+ n1.getNome());
+    System.out.println("E-mail cadastrado: " + n1.getEmail());
+
+
+    Professor p1 = new Professor();
+
+    p1.setNome("Mario Bros");
+    p1.setCPF(963699963);
+
+    System.out.println("Nome cadastrado: "+ p1.getNome());
+    System.out.println("CPF inserido: " + n1.getCPF() );
+
+
 
 
     }

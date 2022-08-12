@@ -1,30 +1,13 @@
+import javax.swing.JOptionPane;
 public class Faculdade {
     public static void main(String[] args) {
 
         Boletim B1 = new Boletim();
         Boletim B2 = new Boletim();
 
-    Aluno n1 = new Aluno();
+        double m_grad = B1.calcular_media(9.5, 4.7,6.9);
+        double m_pos = B2.calcular_media(7.4, 9.2);
 
-    n1.setNome("Yoshi");
-    n1.setCPF(369963369);
-    n1.setEmail("yoshi@senac.com.br");
-
-    System.out.println("CPF inserido: " + n1.getCPF() );
-    System.out.println("Nome cadastrado: "+ n1.getNome());
-    System.out.println("E-mail cadastrado: " + n1.getEmail());
-
-
-    Professor p1 = new Professor();
-
-    p1.setNome("Mario Bros");
-    p1.setCPF(963699963);
-
-    System.out.println("Nome cadastrado: "+ p1.getNome());
-    System.out.println("CPF inserido: " + n1.getCPF() );
-
-
-
-
+        JOptionPane.showMessageDialog(null, "A media do aluno de graduação é " + m_grad + "\nA média do aluno de pós graduação é " + m_pos, "BOLETIM", JOptionPane.PLAIN_MESSAGE);
     }
 }

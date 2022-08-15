@@ -23,7 +23,7 @@ public class Faculdade {
 
         System.out.println("Uso do construtor com 3 parametros: ");
         B1.imprimir();
-        System.out.println("Uso do constrtutor com nenhum parametro: ");
+        System.out.println("Uso do construtor com nenhum parametro: ");
         B2.imprimir();
         System.out.println("Uso do construtor com dois parametros: ");
         B3.imprimir();

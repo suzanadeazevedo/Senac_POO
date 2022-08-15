@@ -4,39 +4,55 @@ public class Boletim {
     private int frequencia;
     private String status;
 
-    public float getNota(){
+    public Boletim(float n, int f, String s)
+    {
+        setBoletim(n, f, s);
+    }
+
+    public Boletim (String st)
+    {
+        this(10, 100, st);
+    }
+
+    public Boletim()
+    {
+        this(0,0, null);
+    }
+
+    public void setBoletim(float n, int f, String st)
+    {
+        setNota(n);
+        setFrequencia(f);
+        setStatus(st);
+    }
+
+    public float getNota()
+    {
         return nota;
     }
-
-    public void inserir_nota(float nota){
-
-    }
-    public void excluir_nota(){
-
+    public void setNota(float nota)
+    {
+        this.nota = nota;
     }
 
-    public void alterar_nota(float nova_nota){
-
-    }
-
-    public int getFrequencia() {
+    public int getFrequencia()
+    {
         return frequencia;
     }
-
-    public void inserir_frequencia (boolean freq){
-
+    public void setFrequencia (int frequencia)
+    {
+        this.frequencia = frequencia;
     }
 
-    public String getStatus() {
+    public String getStatus()
+    {
         return status;
     }
-
-    public void alterar_status(){
-
+    public void setStatus(String status) {
+        this.status = status;
     }
 
-
-        public double calcular_media(double AM, double AC, double AS)
+    public double calcular_media(double AM, double AC, double AS)
         {
             double media = AM * 0.3 + AC * 0.2 + AS * 0.5;
             return media;
@@ -47,5 +63,8 @@ public class Boletim {
             return media;
         }
 
-
+    public void imprimir()
+    {
+        System.out.println(getNota() + "\n" + getFrequencia() + "\n" + getStatus() + "\n");
+    }
 }
